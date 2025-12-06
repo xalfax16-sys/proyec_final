@@ -137,7 +137,7 @@ def agregar_producto(archivo_db:str,tabla_nomb:str):#
         tabla_nomb(str): Nombre de la tabla
     """
     nombre,descripcion,cantidad,precio,categoria = obtener_datos(
-    "el nombre: ","la descripcion: ","el stock: ","el precio: ","la categoria: ")
+    "el nombre: ","la descripcion: ","el stock : ","el precio : ","la categoria: ")
     conexion,cursor = crear_conex_cursor(archivo_db)
     cursor.execute(f"INSERT INTO {tabla_nomb} (nombre,descripcion,cantidad,precio,categoria) VALUES (?,?,?,?,?)",
     (nombre,descripcion,cantidad,precio,categoria))
